@@ -10,6 +10,7 @@ import SwiftUI
 
 struct LoginFormat: View {
     @EnvironmentObject private var viewModel: LoginViewModel
+    
     var body: some View {
         VStack(alignment: .center, spacing: 8){
             Spacer()
@@ -17,7 +18,7 @@ struct LoginFormat: View {
             CustomTextField(label:"Your Email",placeholder:"Email", text: $viewModel.email, keyboardType: .emailAddress)
             Spacer()
                 .frame(maxHeight: 8)
-            CustomTextField(label: "Your Password", placeholder: "Password", text: $viewModel.password)
+            CustomTextField(label: "Your Password", placeholder: "Password", text: $viewModel.password, isSecure: true)
             HStack(alignment: .center) {
                 Button(action:{}){
                     Text("Forget Password?")

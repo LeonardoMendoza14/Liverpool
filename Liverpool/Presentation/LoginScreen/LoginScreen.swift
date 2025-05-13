@@ -21,6 +21,9 @@ struct LoginScreen: View{
                     }
             }
             .ignoresSafeArea()
+            .navigationDestination(isPresented: $viewModel.isLogged){
+                
+            }
         }
     }
 }

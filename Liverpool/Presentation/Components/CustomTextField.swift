@@ -11,6 +11,7 @@ struct CustomTextField: View {
     let label: String
     let placeholder: String
     @Binding var text: String
+    var isSecure: Bool = false
     var keyboardType: UIKeyboardType = .default
     
 
