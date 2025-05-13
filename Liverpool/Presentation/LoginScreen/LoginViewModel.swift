@@ -33,7 +33,7 @@ class LoginViewModel : ObservableObject {
             try await authRepository.login(email: email, password: password)
             isLogged = true
         } catch {
-            errorMessage = "Login failed: \(error.localizedDescription)"
+            // Por implementar el sistema de respuesta a fallo de autentificacion
             isLogged = false
         }
         
