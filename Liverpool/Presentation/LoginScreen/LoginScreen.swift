@@ -14,7 +14,7 @@ struct LoginScreen: View{
     var body: some View{
         NavigationStack {
             ZStack{
-                    Color.mainBlack
+                    Color.primaryPink
                     VStack {
                         LoginContent()
                             .environmentObject(viewModel)

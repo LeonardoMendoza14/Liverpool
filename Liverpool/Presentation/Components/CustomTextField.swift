@@ -25,7 +25,7 @@ struct CustomTextField: View {
             // Caja del TextField
             TextField(placeholder, text: $text)
                 .padding()
-                .background(Color.white.opacity(0.05)) // Fondo oscuro translúcido
+                .background(Color.black.opacity(0.05)) // Fondo oscuro translúcido
                 .cornerRadius(12)
                 .foregroundColor(.white)
                 .autocapitalization(.none)
