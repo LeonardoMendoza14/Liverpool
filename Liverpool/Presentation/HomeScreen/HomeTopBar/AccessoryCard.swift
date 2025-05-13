@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ProductCard: View {
+struct AccessoryCard: View {
     let product: Product
 
     var body: some View {
@@ -11,7 +11,7 @@ struct ProductCard: View {
             Text(product.name)
                 .font(.subheadline)
             Text(product.priceRange)
-                .foregroundColor(.red)
+                .foregroundColor(.blue)
                 .font(.caption)
         }
         .frame(width: 120)
