@@ -22,10 +22,10 @@ struct LoginFormat: View {
             Spacer()
                 .frame(maxHeight: 20)
             
-            CustomTextField(label:"Your Email",placeholder:"Email", text: $viewModel.email, keyboardType: .emailAddress)
+            CustomTextField(label:"Correo electronico*",placeholder:"Email", text: $viewModel.email, keyboardType: .emailAddress)
             Spacer()
                 .frame(maxHeight: 8)
-            CustomTextField(label: "Your Password", placeholder: "Password", text: $viewModel.password, isSecure: true)
+            CustomTextField(label: "Contraseña*", placeholder: "Password", text: $viewModel.password, isSecure: true)
             HStack(alignment: .center) {
                 Button(action:{}){
                     Text("Forget Password?")
@@ -44,8 +44,9 @@ struct LoginFormat: View {
             HStack {
                 Text("Don't have an account? ")
                     .foregroundStyle(.gray)
-                Button(action: {}){
+                NavigationLink(destination: SignUpScreen()){
                     Text("Sign Up")
+                        .navigationBarBackButtonHidden()
                 }
             }
             

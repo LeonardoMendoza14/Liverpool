@@ -20,14 +20,14 @@ struct CustomTextField: View {
             // Etiqueta superior
             Text(label)
                 .font(.subheadline)
-                .foregroundColor(Color.white.opacity(0.5))
+                .foregroundColor(Color.black)
 
             // Caja del TextField
             TextField(placeholder, text: $text)
                 .padding()
-                .background(Color.black.opacity(0.05)) // Fondo oscuro translúcido
+                .background(Color.black.opacity(0.05))
                 .cornerRadius(12)
-                .foregroundColor(.white)
+                .foregroundColor(.black)
                 .autocapitalization(.none)
                 .keyboardType(keyboardType)
         }

@@ -28,7 +28,7 @@ class LoginViewModel: ObservableObject {
             isLogged = true
         } catch {
             isLogged = false
-            errorMessage = error.localizedDescription // también puedes mostrar un mensaje aquí
+            errorMessage = error.localizedDescription
         }
 
         isLoading = false

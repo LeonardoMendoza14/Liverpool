@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CustomButton: View {
     let text: String
-    let action: () async -> Void  // Acción asincrónica
+    let action: () async -> Void
 
     var body: some View {
         Button {
@@ -14,7 +14,7 @@ struct CustomButton: View {
                 .frame(maxWidth: .infinity, minHeight: 14)
                 .foregroundColor(.white)
                 .padding()
-                .background(Color.blue) // Puedes cambiar a .primaryPink si lo tienes definido
+                .background(Color.primaryPink)
                 .cornerRadius(15)
         }
     }
