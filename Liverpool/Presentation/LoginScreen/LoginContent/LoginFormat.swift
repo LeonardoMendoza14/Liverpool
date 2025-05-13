@@ -13,7 +13,14 @@ struct LoginFormat: View {
     var body: some View {
         VStack(alignment: .center, spacing: 8){
             Spacer()
-                .frame(maxHeight: 16)
+                .frame(maxHeight: 20)
+            
+            Text("Log In")
+                .font(.system(size: 40, weight: .heavy))
+            
+            Spacer()
+                .frame(maxHeight: 20)
+            
             CustomTextField(label:"Your Email",placeholder:"Email", text: $viewModel.email, keyboardType: .emailAddress)
             Spacer()
                 .frame(maxHeight: 8)
@@ -25,12 +32,12 @@ struct LoginFormat: View {
             }
             .frame(maxWidth: .infinity, alignment: .trailing)
             
-            Divider()
+            Spacer()
                 .frame(maxHeight: 4)
             
             CustomButton(text:"Log In", action: viewModel.login)
             
-            Divider()
+            Spacer()
                 .frame(maxHeight: 8)
             
             HStack {
@@ -41,7 +48,7 @@ struct LoginFormat: View {
                 }
             }
             
-            Divider()
+            Spacer()
                 .frame(maxHeight: 8)
             
             HStack {
@@ -74,8 +81,8 @@ struct LoginFormat: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 32)
-        .background(Color.loginFormatBackground)
-        .cornerRadius(15)
+        .background(Color.white)
+        .clipShape(RoundedCorner(radius: 80, corners: [.topLeft]))
     }
 }
 
