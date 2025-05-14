@@ -5,14 +5,14 @@ struct HomeTopBar: View {
         VStack(spacing: 12) {
             Spacer()
                 .frame(height: UIApplication.shared.windows.first?.safeAreaInsets.top ?? 44)
-
+            
             HStack {
                 Image(systemName: "storefront.fill")
                 Text("Elige una tienda")
                 Spacer()
             }
             .foregroundColor(.white)
-
+            
             HStack(spacing: 8) {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color.white)
@@ -21,14 +21,14 @@ struct HomeTopBar: View {
                         TextField("Buscar", text: .constant(""))
                             .padding(.horizontal)
                     )
-
+                
                 Button {
                     // Acción
                 } label: {
                     Image(systemName: "heart")
                         .foregroundColor(.white)
                 }
-
+                
                 Button {
                     // Acción
                 } label: {
@@ -36,22 +36,27 @@ struct HomeTopBar: View {
                         .foregroundColor(.white)
                 }
             }
-
-            HStack(spacing: 0) {
+            HStack() {
                 Button("Nuevo") {}
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.primaryPink)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
-
+                
                 Button("Para ti") {}
                     .foregroundColor(.primaryPink)
                     .padding()
+                    .background(.white)
             }
-            .background(Color.white)
             .cornerRadius(20)
+            
         }
         .padding()
         .background(Color.primaryPink)
+        
     }
+}
+
+#Preview {
+    HomeTopBar()
 }

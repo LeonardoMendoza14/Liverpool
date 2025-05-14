@@ -18,7 +18,7 @@ struct HomeScreen: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 12) {
                             ForEach(viewModel.products) { product in
-                                ProductCard(product: product)
+                                SimpleProductCard(product: product)
                             }
                         }
                         .padding(.horizontal)
@@ -36,7 +36,7 @@ struct HomeScreen: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 12) {
                             ForEach(viewModel.products) { product in
-                                AccessoryCard(product: product)
+                                TitleProductCard(product: product)
                             }
                         }
                         .padding(.horizontal)
